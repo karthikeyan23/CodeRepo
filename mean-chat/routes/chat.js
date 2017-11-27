@@ -78,7 +78,7 @@ function sendDF(message) {
     console.log(response.result.fulfillment.speech);
     resMessage.message = response.result.fulfillment.speech;
     var date = new Date();
-    resMEssage.updated_at = date;
+    resMessage.updated_at = date;
     Chat.create(resMessage);    
     io.emit('new-message', { message: resMessage });
   });
