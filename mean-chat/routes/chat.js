@@ -69,17 +69,20 @@ function sendDF(message) {
   var app = apiai("ae02f46f39f94a9e9faa5d05777d7f01");
   var resMessage = message;
   resMessage.nickname = message.room;
-  var request = app.textRequest(message.message, {
-    sessionId: 'test'
-  });
-
+  if (message.message == null || message.message == '') {
+    return;
+  }
+    var request = app.textRequest(message.message, {
+      sessionId: 'test'
+    });
+  
   request.on('response', function (response) {
     console.log(response);
     console.log(response.result.fulfillment.speech);
     resMessage.message = response.result.fulfillment.speech;
     var date = new Date();
     resMessage.updated_at = date;
-    Chat.create(resMessage);    
+    Chat.create(resMessage);
     io.emit('new-message', { message: resMessage });
   });
 

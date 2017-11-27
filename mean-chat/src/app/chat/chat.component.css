@@ -29,7 +29,23 @@
     color: #777777;
 }
 
-.chat p .message p { word-spacing: 40px; }
+.chat p .message p { margin-inline-start: 40px; }
+
+.chat .user-request {
+    background-color: #efefef;
+    float: left;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+  .chat .server-response {
+    color: white;
+    background-color: #A5D175;
+    float: right;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
 
 .panel .slidedown .glyphicon, .chat .glyphicon
 {
@@ -58,5 +74,49 @@
 {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #555;
+}
+
+
+.button1
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(180deg, #39C2C9 0%, #3FC8C9 80%, #3FC8C9 100%);
+    box-shadow: 2px 5px 30px rgba(63, 200, 201, .4);
+
+    will-change: transform, filter;
+    transition: all 0.3s ease-out;
+    font-size: 10px;
+    line-height: 30px;
+    text-shadow: 1px 2px 2px #2a8b90;
+}
+.button1:hover 
+{
+    transform: scale(.92);
+}
+.button1:active 
+{
+    filter: brightness(.8);
+}
+.button1:focus 
+{
+    outline: 0;
+}
+
+.fa {
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 1.3em;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;    
+}
+.fa-github::before {
+    content: "\f09b";
 }
 
