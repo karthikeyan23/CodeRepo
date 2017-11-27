@@ -49,17 +49,20 @@
             <div class="input-group">
               <input type="hidden" [(ngModel)]="msgData.room" name="room" />
               <input type="hidden" [(ngModel)]="msgData.nickname" name="nickname" />
-              <input id="btn-input" type="text" [(ngModel)]="msgData.message" name="message" class="form-control input-sm" placeholder="Type your message here..."
+              <input id="btn-input" type="text" [(ngModel)]="msgData.message" name="message" class="form-control input-sm" 
+                placeholder="Type your message here..."
                 required="" />
               <span class="input-group-btn">
-                <button class="btn btn-warning btn-sm" id="btn-chat" [disabled]="!msgForm.form.valid">
+                <button type="submit" class="btn btn-warning btn-sm" id="btn-chat" [disabled]="!msgForm.form.valid">
                   Send</button>
               </span>
             </div>
-            <div style="margin: 10px auto; text-align: center;">
-              <button class="button1 fa fa-microphone"></button>
-            </div>
-          </form>
+            <div class="voice-button-div">
+              <button type="button" [ngClass]="recognizing ? 'button2 fa fa-microphone' : 'button1 fa fa-microphone'" 
+                id="btn-voice" (mousedown)="startVoice()" 
+                (mouseup)="stopVoice()"></button>
+            </div>            
+          </form>          
         </div>
       </div>
       <ng-template #joinroom>

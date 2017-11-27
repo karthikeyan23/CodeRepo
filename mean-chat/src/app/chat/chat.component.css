@@ -76,6 +76,11 @@
     background-color: #555;
 }
 
+.voice-button-div
+{
+    margin: 10px auto; 
+    text-align: center;
+}
 
 .button1
 {
@@ -105,6 +110,38 @@
     filter: brightness(.8);
 }
 .button1:focus 
+{
+    outline: 0;
+}
+
+.button2
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(180deg, rgb(201, 134, 57) 0%, rgb(201, 63, 86) 80%, rgb(201, 72, 63) 100%);
+    box-shadow: 2px 5px 30px rgba(201, 114, 63, 0.4);
+
+    will-change: transform, filter;
+    transition: all 0.3s ease-out;
+    font-size: 10px;
+    line-height: 30px;
+    text-shadow: 1px 2px 2px #962b66;
+}
+.button2:hover 
+{
+    transform: scale(.92);
+}
+.button2:active 
+{
+    filter: brightness(.8);
+}
+.button2:focus 
 {
     outline: 0;
 }
