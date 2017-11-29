@@ -1,13 +1,19 @@
 <div class="container">
   <div class="row">
     <div class="col-md-5">
-      <div class="panel panel-primary" *ngIf="joinned; else joinroom">
-        <div class="panel-heading">
-          <span class="glyphicon glyphicon-comment"></span> {{ msgData.room }}
-          <div class="btn-group pull-right">
-            <button type="button" class="btn btn-default btn-xs" (click)="logout()">
-              Logout
-            </button>
+      <div class="panel-primary" *ngIf="joinned; else joinroom">
+        <div class="panel-title">
+          <div>
+            <div class="panel-title-icon">
+              <img id="agent-avatar" src="/api-client/assets/img/logo-short.png" srcset="https://console.dialogflow.com/api-client/assets/img/logo-short.png 2x, https://console.dialogflow.com/api-client/assets/img/logo-short.png">
+            </div>
+            <div>
+              <div class="panel-title-text">{{ msgData.room }}</div>
+              <div class="panel-title-sub">Sample Bot</div>
+              <div class="btn-group pull-right">
+                  <button type="button" class="btn btn-default btn-xs" (click)="logout()"></button>              
+                </div>
+            </div>            
           </div>
         </div>
         <div #scrollMe class="panel-body">
@@ -19,7 +25,7 @@
                           </span>-->
                 <div class="chat-body clearfix">
                   <div class="header">
-                   <!-- <strong class="primary-font">{{ c.nickname }}</strong>-->
+                    <!-- <strong class="primary-font">{{ c.nickname }}</strong>-->
                     <small class="pull-right text-muted">
                       <span class="glyphicon glyphicon-time"></span>{{ c.updated_at | date: 'medium' }}</small>
                   </div>
@@ -35,7 +41,7 @@
                     <div class="header">
                       <small class=" text-muted">
                         <span class="glyphicon glyphicon-time"></span>{{ c.updated_at | date: 'medium' }}</small>
-                    <!--  <strong class="pull-right primary-font">{{ c.nickname }}</strong> -->
+                      <!--  <strong class="pull-right primary-font">{{ c.nickname }}</strong> -->
                     </div>
                     <div class="bubble-right">{{ c.message }}</div>
                   </div>
@@ -49,8 +55,7 @@
             <div class="input-group">
               <input type="hidden" [(ngModel)]="msgData.room" name="room" />
               <input type="hidden" [(ngModel)]="msgData.nickname" name="nickname" />
-              <input id="btn-input" type="text" [(ngModel)]="msgData.message" name="message" class="form-control input-sm" 
-                placeholder="Type your message here..."
+              <input id="btn-input" type="text" [(ngModel)]="msgData.message" name="message" class="form-control input-sm" placeholder="Type your message here..."
                 required="" />
               <span class="input-group-btn">
                 <button type="submit" class="btn btn-warning btn-sm" id="btn-chat" [disabled]="!msgForm.form.valid">
@@ -58,11 +63,10 @@
               </span>
             </div>
             <div class="voice-button-div">
-              <button type="button" [ngClass]="recognizing ? 'button2 fa fa-microphone' : 'button1 fa fa-microphone'" 
-                id="btn-voice" (mousedown)="startVoice()" 
+              <button type="button" [ngClass]="recognizing ? 'button2 fa fa-microphone' : 'button1 fa fa-microphone'" id="btn-voice" (mousedown)="startVoice()"
                 (mouseup)="stopVoice()"></button>
-            </div>            
-          </form>          
+            </div>
+          </form>
         </div>
       </div>
       <ng-template #joinroom>

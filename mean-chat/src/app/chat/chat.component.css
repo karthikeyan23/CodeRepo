@@ -75,7 +75,7 @@
     display: block;
     width: 0;
     z-index: 1;
-    bottom: -9px;
+    bottom: -19px;
     left: 10%;
   }
 
@@ -107,7 +107,7 @@
     display: block;
     width: 0;
     z-index: 1;
-    bottom: -9px;
+    bottom: -19px;
     left: 90%;
   }
 
@@ -121,6 +121,48 @@
 {
     overflow-y: scroll;
     height: 250px;
+}
+
+.panel-primary {
+     border-color: #2b313f; 
+}
+
+
+ .panel-title {    
+    background-color: #2b313f;
+    border-color: #2b313f;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.panel-title-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.panel-title-text{
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: #fff;
+    width: 50%;
+    padding-left: 80px;
+    font-size: 18px;
+}
+
+.panel-title-sub{
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: #fff;
+    max-width: 50%;
+    padding-left: 80px;
+    font-size: 12px;
 }
 
 ::-webkit-scrollbar-track
