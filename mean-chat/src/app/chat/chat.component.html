@@ -19,11 +19,11 @@
                           </span>-->
                 <div class="chat-body clearfix">
                   <div class="header">
-                    <strong class="primary-font">{{ c.nickname }}</strong>
+                   <!-- <strong class="primary-font">{{ c.nickname }}</strong>-->
                     <small class="pull-right text-muted">
                       <span class="glyphicon glyphicon-time"></span>{{ c.updated_at | date: 'medium' }}</small>
                   </div>
-                  <div>{{ c.message }}</div>
+                  <div class="bubble-left">{{ c.message }}</div>
                 </div>
               </div>
               <ng-template #rightchat>
@@ -35,9 +35,9 @@
                     <div class="header">
                       <small class=" text-muted">
                         <span class="glyphicon glyphicon-time"></span>{{ c.updated_at | date: 'medium' }}</small>
-                      <strong class="pull-right primary-font">{{ c.nickname }}</strong>
+                    <!--  <strong class="pull-right primary-font">{{ c.nickname }}</strong> -->
                     </div>
-                    <div>{{ c.message }}</div>
+                    <div class="bubble-right">{{ c.message }}</div>
                   </div>
                 </div>
               </ng-template>
