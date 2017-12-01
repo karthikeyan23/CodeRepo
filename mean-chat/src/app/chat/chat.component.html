@@ -3,17 +3,17 @@
     <div class="col-md-5">
       <div class="panel-primary" *ngIf="joinned; else joinroom">
         <div class="panel-title">
-          <div>
-            <div class="panel-title-icon">
+          <div class="panel-title-icon">
+            <div class="display: block;">
               <img id="agent-avatar" src="/api-client/assets/img/logo-short.png" srcset="https://console.dialogflow.com/api-client/assets/img/logo-short.png 2x, https://console.dialogflow.com/api-client/assets/img/logo-short.png">
             </div>
-            <div>
-              <div class="panel-title-text">{{ msgData.room }}</div>
-              <div class="panel-title-sub">Sample Bot</div>
-              <div class="btn-group pull-right">
-                  <button type="button" class="btn btn-default btn-xs" (click)="logout()"></button>              
-                </div>
-            </div>            
+          </div>
+          <div class="panel-title-wrapper">
+            <div class="panel-title-text">{{ msgData.room }}</div>
+            <div class="panel-title-sub">Sub text</div>
+          </div>
+          <div class="panel-title-logoff">
+            <span class="	glyphicon glyphicon-log-out" (click)="logout()"></span>
           </div>
         </div>
         <div #scrollMe class="panel-body">
