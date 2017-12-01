@@ -24,12 +24,16 @@
                             <img src="http://placehold.it/50/55C1E7/fff&text=ME" alt="User Avatar" class="img-circle" />
                           </span>-->
                 <div class="chat-body clearfix">
-                  <div class="header">
-                    <!-- <strong class="primary-font">{{ c.nickname }}</strong>-->
-                    <small class="pull-right text-muted">
-                      <span class="glyphicon glyphicon-time"></span>{{ c.updated_at | date: 'medium' }}</small>
+                  <!-- <div class="header">
+                    <strong class="primary-font">{{ c.nickname }}</strong>
+                    
+                  </div>-->
+                  <div class="bubble-left">
+                    {{ c.message }}
+                    <div class="bubble-timestamp">
+                      <small class=" text-muted">{{ c.updated_at | date: 'medium' }}</small>
+                    </div>
                   </div>
-                  <div class="bubble-left">{{ c.message }}</div>
                 </div>
               </div>
               <ng-template #rightchat>
@@ -38,12 +42,16 @@
                               <img src="http://placehold.it/50/FA6F57/fff&text=U" alt="User Avatar" class="img-circle" />
                             </span>-->
                   <div class="chat-body clearfix">
-                    <div class="header">
-                      <small class=" text-muted">
-                        <span class="glyphicon glyphicon-time"></span>{{ c.updated_at | date: 'medium' }}</small>
-                      <!--  <strong class="pull-right primary-font">{{ c.nickname }}</strong> -->
+                    <!-- <div class="header">
+                      
+                       <strong class="pull-right primary-font">{{ c.nickname }}</strong> 
+                    </div>-->
+                    <div class="bubble-right">
+                      {{ c.message }}
+                      <div class="bubble-timestamp">
+                        <small  class="pull-right text-muted">{{ c.updated_at | date: 'medium' }}</small>
+                      </div>
                     </div>
-                    <div class="bubble-right">{{ c.message }}</div>
                   </div>
                 </div>
               </ng-template>
