@@ -64,7 +64,7 @@
               <input type="hidden" [(ngModel)]="msgData.room" name="room" />
               <input type="hidden" [(ngModel)]="msgData.nickname" name="nickname" />
               <input id="btn-input" type="text" [(ngModel)]="msgData.message" name="message" class="form-control input-sm" placeholder="Type your message here..."
-                required="" />
+                required="" autocomplete="off"/>
               <span class="input-group-btn">
                 <button type="submit" class="btn btn-warning btn-sm" id="btn-chat" [disabled]="!msgForm.form.valid">
                   Send</button>
