@@ -23,8 +23,8 @@ io.on('connection', function (socket) {
 });
 
 /* GET ALL CHATS */
-router.get('/:room', function (req, res, next) {
-  Chat.find({ room: req.params.room }, function (err, chats) {
+router.get('/:userID', function (req, res, next) {
+  Chat.find({ userID: req.params.userID }, function (err, chats) {
     if (err) return next(err);
     res.json(chats);
   });
@@ -68,7 +68,7 @@ function sendDF(message) {
 
   var app = apiai("ae02f46f39f94a9e9faa5d05777d7f01");
   var resMessage = message;
-  resMessage.nickname = message.room;
+  resMessage.nickname = "Robot";
   if (message.message == null || message.message == '') {
     return;
   }

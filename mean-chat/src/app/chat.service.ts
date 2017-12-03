@@ -7,9 +7,9 @@ export class ChatService {
 
   constructor(private http: Http) { }
 
-  getChatByRoom(room) {
+  getChatByID(userID) {
     return new Promise((resolve, reject) => {
-      this.http.get('/chat/' + room)
+      this.http.get('/chat/' + userID)
         .map(res => res.json())
         .subscribe(res => {
           resolve(res);
