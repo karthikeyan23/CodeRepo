@@ -242,13 +242,39 @@
     color: #efefef;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.22);
     text-decoration: none;
-    padding-right: 10px;
-    padding-top: 7px;
+    padding-top: 4px;
     overflow: hidden;
     position: relative;
     font-weight: bold;
-    float: right
+    float: right;
+    border-radius: 30px;
+    width: 30px;
+    margin-top: 7px;
+    font-size: 20px;
 }
+
+.panel-title-logoff:hover{
+    background-color:black;
+}
+
+.glyphicon{ 
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;   
+    -webkit-transition: 0.6s ease-out;
+    -moz-transition:  0.6s ease-out;
+    transition:  0.6s ease-out;
+  }
+  
+  .glyphicon:hover { 
+    -webkit-transform: rotateZ(720deg);
+    -moz-transform: rotateZ(720deg);
+    transform: rotateZ(720deg);   
+  }
 
 .panel-title-ribbon{
     position: fixed;
