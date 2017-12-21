@@ -43,6 +43,53 @@
     margin-top: 10px;
     width: 20%;
 }
+
+.login-form-button{
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    outline: none;
+    height: 40px;
+    text-align: center;
+    width: 30%;
+    border-radius: 40px;
+    background: #fff;
+    border: 2px solid #1ECD97;
+    color: #1ECD97;
+    letter-spacing: 1px;
+    text-shadow: 0;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.login-form-button:hover{
+    color:white;
+    background: #1ECD97;
+}
+
+.login-form-button:active  {
+    width: 40px;
+    border-color: #bbbbbb;
+    border-width: 3px;
+    font-size: 0;
+    border-left-color: #1ECD97;
+    -webkit-animation: rotating 2s 0.25s linear infinite;
+    animation: rotating 2s 0.25s linear infinite;
+}
+
+.login-form-button[disabled]:hover {
+    background: darkgray;
+}
+
+.login-form-button:disabled {
+    color: lightgray;
+    border: darkgrey;
+}
+
 .panel .slidedown .glyphicon, .chat .glyphicon
 {
     margin-right: 5px;
@@ -150,9 +197,9 @@
     font-size: 20px;
 }
 
-.panel-title-logoff:hover{
+/*.panel-title-logoff:hover{
     background-color:black;
-}
+}*/
 
 .glyphicon{ 
     position: relative;
@@ -165,12 +212,14 @@
     -webkit-transition: 0.6s ease-out;
     -moz-transition:  0.6s ease-out;
     transition:  0.6s ease-out;
+    color:white;
   }
   
   .glyphicon:hover { 
-    -webkit-transform: rotateZ(720deg);
-    -moz-transform: rotateZ(720deg);
-    transform: rotateZ(720deg);   
+    color:#A5D175;
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);   
   }
 
 .panel-title-ribbon{

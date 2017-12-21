@@ -128,6 +128,10 @@ export class ChatComponent implements OnInit, AfterViewChecked {
     localStorage.setItem("user", JSON.stringify(this.newUser));
     this.getChatByID(this.newUser.userID);
     this.msgData = { userID: this.newUser.userID, nickname: this.newUser.nickname, message: '' };
+    setTimeout(function() {
+      //Authentication logic goes here
+      console.log("Authentication complete");
+      },1000);
     this.joinned = true;
     this.socket.emit('save-message', { userID: this.newUser.userID, nickname: this.newUser.nickname, message: 'Chat session started', updated_at: date });
   }
